@@ -1,5 +1,5 @@
+// ADD ELEMENT
 const add_button = document.getElementById("add-button");
-
 add_button.addEventListener("click", () => {
   // INPUT
   const input = document.getElementsByTagName("input")[0];
@@ -11,9 +11,10 @@ add_button.addEventListener("click", () => {
   p.textContent = input.value;
   p.className = "item-text";
   const button = document.createElement("button");
-  button.className = "delete-item";
-  button.setAttribute('id', 0)
-
+  button.className = "delete-item"
+  button.addEventListener('click', (e) => {
+    e.target.parentElement.remove()
+  })
   //BUTTON
 
   // ВЫВОД
@@ -21,4 +22,3 @@ add_button.addEventListener("click", () => {
   div0.prepend(div);
   input.value = "";
 });
-

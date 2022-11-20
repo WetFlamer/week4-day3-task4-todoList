@@ -1,7 +1,14 @@
 // ADD ELEMENT
 const add_button = document.getElementById("add-button");
 add_button.addEventListener("click", () => {
+  
   const input = document.getElementById("input");
+  if (!input.value) {
+    input.placeholder = "Текст обязателен"
+      return  
+  }
+  input.placeholder = "Введите текст"
+
   //DIV0
   const div0 = document.getElementById("list");
   const div = document.createElement("div");

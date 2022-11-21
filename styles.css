@@ -93,7 +93,6 @@ body {
 }
 
 .list {
-  border: 1px solid #000;
   overflow: auto;
   margin-top: 200px;
   width: 400px;
